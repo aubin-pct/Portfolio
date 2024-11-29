@@ -12,60 +12,38 @@ import photoperfil from "../../../../public/img/PP_noir_blanc.webp";
       <h2 class="text-name">Aubin Perchet</h2>
       <div class="container-profession">
         <div>
-          <span class="p-profession">D</span>
-          <span class="p-profession">é</span>
-          <span class="p-profession">v</span>
-          <span class="p-profession">e</span>
-          <span class="p-profession">l</span>
-          <span class="p-profession">o</span>
-          <span class="p-profession">p</span>
-          <span class="p-profession">p</span>
-          <span class="p-profession">e</span>
-          <span class="p-profession">u</span>
-          <span class="p-profession">r</span>
+          <span class="p-profession">ETUDIANT EN BUT INFORMATIQUE</span>
           <span class="">&nbsp;</span>
         </div>
         <div class="">
-          <span class="p-profession">F</span>
-          <span class="p-profession">r</span>
-          <span class="p-profession">o</span>
-          <span class="p-profession">n</span>
-          <span class="p-profession">t</span>
-          <span class="p-profession">-</span>
-          <span class="p-profession">e</span>
-          <span class="p-profession">n</span>
-          <span class="p-profession">d</span>
+          <span class="p-profession2 titre">Bienvenue sur mon portfolio !</span>
           <span class="">&nbsp;</span>
-          <span class="p-profession">J</span>
-          <span class="p-profession">r</span>
         </div>
       </div>
       <p class="p-presentation">
-        Avec plus d'un an d'expérience dans la création d'expériences web
-        attrayantes et fonctionnelles. Expert en technologies front-end, y compris
-        HTML5, CSS3, JavaScript et frameworks comme React, Next.js, Astro. Capable
-        de traduire des designs créatifs en code interactif et d'optimiser la
-        vitesse et les performances des sites web.
+        Étudiant en 2ᵉ année de BUT Informatique, je suis passionné par le développement et toujours curieux d’apprendre. 
+        J’ai réalisé un site web en PHP/HTML/CSS en méthode Agile et exploré Flutter pour le développement mobile. 
+        Avec un intérêt grandissant pour la finance et l’IA, je suis prêt à relever de nouveaux défis.
       </p>
       <div class="container-curriculum">
-        <a href="#" target="_blank" class="a-action"
+        <a href="mailto:aubin.perchet69@gmail.com" target="_blank" class="a-action"
           >Email</a
         >
         <a
-          href="#"
+          href="../../../public/img/CV_Stage_Alternance_Perchet_Aubin.pdf"
           class="a-curriculum"
           target="_blank">Mon CV</a
         >
       </div>
       <div class="container-social">
-        <p class="">Github</p>
-        <a href="#" target="_blank">
+        <p class="">Mes réseaux</p>
+        <a href="https://github.com/aubin-pct" target="_blank">
           <li class="li-social">
             <i class="fa-brands fa-github"></i>
           </li>
         </a>
         <a
-          href="#"
+          href="http://www.linkedin.com/in/aubin-perchet-96bb502aa"
           target="_blank"
         >
           <li class="li-social">
@@ -78,7 +56,7 @@ import photoperfil from "../../../../public/img/PP_noir_blanc.webp";
       <div class="photo-perfil">
         <picture>
           {/* If you are not using vercel, place a normal <img> tag */}
-          <Image src={photoperfil} alt="Osnaider Martinez" id="inicio" />
+          <Image src={photoperfil} alt="Aubin Perchet" id="inicio" />
         </picture>
       </div>
     </div>
@@ -173,8 +151,20 @@ import photoperfil from "../../../../public/img/PP_noir_blanc.webp";
     cursor: pointer;
     display: inline-block;
     text-transform: capitalize;
+    letter-spacing: 6px;
     /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
   }
+
+  .p-profession2 {
+    font-size: 25px;
+    font-weight: 800;
+    cursor: pointer;
+    display: inline-block;
+    text-transform: capitalize;
+    letter-spacing: 4px;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+  }
+
 
   .bouncing {
     transition: 0.8s all;
