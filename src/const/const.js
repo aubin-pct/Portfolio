@@ -42,6 +42,8 @@ export const IconKeys = {
   php: "php",
   java: "java",
   gitlab: "gitlab",
+  python: "python",
+  c: "c",
   // here add more icon keys
 };
 
@@ -78,6 +80,14 @@ export const skills = [
   {
     title: "GitLab",
     icon: IconKeys.gitlab,
+  },
+  {
+    title: "Python",
+    icon: IconKeys.python,
+  },
+  {
+    title: "C",
+    icon: IconKeys.c,
   }
 ];
 
