@@ -10,10 +10,10 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "dependencies": {
-    "astro": "^4.5.1"
-  },
   "engines": {
     "node": "18.x"
+  },
+  "devDependencies": {
+    "astro": "^5.0.3"
   }
 }

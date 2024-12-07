@@ -44,6 +44,7 @@ export const IconKeys = {
   gitlab: "gitlab",
   python: "python",
   c: "c",
+  mysql: "mysql"
   // here add more icon keys
 };
 
@@ -88,6 +89,10 @@ export const skills = [
   {
     title: "C",
     icon: IconKeys.c,
+  },
+  {
+    title: "MySQL",
+    icon: IconKeys.mysql,
   }
 ];
 
