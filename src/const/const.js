@@ -1,18 +1,8 @@
 export const studies = [
   {
-    title: "Técnico en desarrollo de software",
-    corporation: "SENA - Montería (Córdoba) ",
-    date: "02/2019 – 12/2019",
-  },
-  {
-    title: "Desarrollador Front-end React Js",
-    corporation: "Alura Latam - Remoto",
-    date: "04/2023 – 09/2023",
-  },
-  {
-    title: "Curso profesional de React Js",
-    corporation: "Código facilito - Remoto",
-    date: "04/2023 – 04/2023",
+    title: "Etudiant BUT Informatique",
+    corporation: "IUT Montpellier",
+    date: "2023 – 2026",
   },
 ];
 
@@ -93,30 +83,48 @@ export const skills = [
   {
     title: "MySQL",
     icon: IconKeys.mysql,
+  },
+  {
+    title: "Tailwind CSS",
+    icon: IconKeys.tailwind,
   }
 ];
 
 export const projects = [
   {
-    img: "../../../img/tasks-manager.webp",
-    title: "Tasks Manager",
-    link: "https://task-manager-ecru-chi.vercel.app/dashboard",
-    description: `Administrador de tareas con drag and drop autenticación con Clerk , shadcn.  "En Desarrollo "`,
+    img: "../../public/img/accueilSAE.png",
+    title: "Gestion Notes & Études",
+    link: "Portfolio/descriptionProjet",
+    description: `Ce projet est une application web dédiée aux enseignants et aux étudiants, permettant de suivre les notes des semestres, d'analyser les progrès à l'aide de graphiques interactifs, et d'émettre des avis de poursuite d'études.`,
     technologies: [
       {
-        icon: IconKeys.typeScript,
+        icon: IconKeys.php,
       },
       {
-        icon: IconKeys.nextjs,
+        icon: IconKeys.html,
       },
       {
         icon: IconKeys.tailwind,
       },
       {
-        icon: IconKeys.zustand,
+        icon: IconKeys.mysql,
       },
       {
-        icon: IconKeys.shadcn,
+        icon: IconKeys.javaScript,
+      },
+      {
+        icon: IconKeys.git,
+      },
+    ],
+  },
+  {
+    img: "../../public/img/accueilSAE.png",
+    title: "Trains",
+    link: "https://task-manager-ecru-chi.vercel.app/dashboard",
+    description: `Un jeu inspiré de la gestion ferroviaire, où les joueurs construisent des réseaux, optimisent les trajets et gèrent leurs ressources pour atteindre leurs objectifs. Ce projet met l'accent sur la stratégie et la réflexion.`,
+    technologies: [
+      {
+        icon: IconKeys.java,
       },
     ],
   },

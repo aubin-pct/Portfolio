@@ -1,0 +1,30 @@
+---
+import "./../style/index.css";
+import SiteGestionNote from "../components/descriptions/SiteGestionNote.astro";
+import Footer from "../components/footer/Footer.astro"; 
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content=""
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Aubin Perchet" />
+    <meta property="og:title" content="Aubin Perchet Portfolio" />
+
+    <script
+      src="https://kit.fontawesome.com/2898a0ac51.js"
+      crossorigin="anonymous"></script>
+    <title>Portfolio | Aubin Perchet</title>
+  </head>
+  <body>
+    <div class="container_p">
+        <SiteGestionNote />
+    </div>
+  </body>
+</html>
