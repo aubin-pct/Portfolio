@@ -1,7 +1,18 @@
 ---
 import "./../style/index.css";
 import SiteGestionNote from "../components/descriptions/SiteGestionNote.astro";
+import AppTrain from "../components/descriptions/AppTrain.astro";
 import Footer from "../components/footer/Footer.astro"; 
+
+const components = {
+  SiteGestionNote,
+  AppTrain,
+};
+
+const { url } = Astro.request;
+const page = new URL(url).searchParams.get("page");
+const SelectedComponent = components[page];
+
 ---
 
 <html lang="es">
@@ -24,7 +35,9 @@ import Footer from "../components/footer/Footer.astro";
   </head>
   <body>
     <div class="container_p">
-        <SiteGestionNote />
+      {SelectedComponent ? <SelectedComponent /> : <p>Composant introuvable.</p>}
+
     </div>
   </body>
+  <Footer />
 </html>

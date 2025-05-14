@@ -11,9 +11,10 @@ export interface Props {
   description: string;
   technologies?: Technology[];
   link: string;
+  page: string;
 }
 
-const { technologies, title, img, description, link } = Astro.props;
+const { technologies, title, img, description, link, page} = Astro.props;
 ---
 
 <li class="li-project">
@@ -32,7 +33,7 @@ const { technologies, title, img, description, link } = Astro.props;
     }
   </div>
   <div class="container-link-project">
-    <a href={link} target="_blank">Voir plus</a>
+    <a href={`${link}?page=${page}`} target="_blank">Voir plus</a>
   </div>
 </li>
 

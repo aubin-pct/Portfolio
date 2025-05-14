@@ -34,7 +34,8 @@ export const IconKeys = {
   gitlab: "gitlab",
   python: "python",
   c: "c",
-  mysql: "mysql"
+  mysql: "mysql",
+  tensorflow: "tensorflow"
   // here add more icon keys
 };
 
@@ -48,6 +49,18 @@ export const skills = [
     icon: IconKeys.css,
   },
   {
+    title: "Tailwind CSS",
+    icon: IconKeys.tailwind,
+  },
+  {
+    title: "PHP",
+    icon: IconKeys.php,
+  },
+  {
+    title: "MySQL",
+    icon: IconKeys.mysql,
+  },
+  {
     title: "Git",
     icon: IconKeys.git,
   },
@@ -57,44 +70,36 @@ export const skills = [
     icon: IconKeys.github,
   },
   {
-    title: "Flutter",
-    icon: IconKeys.flutter,
-  },
-  {
-    title: "PHP",
-    icon: IconKeys.php,
+    title: "GitLab",
+    icon: IconKeys.gitlab,
   },
   {
     title: "Java",
     icon: IconKeys.java,
   },
   {
-    title: "GitLab",
-    icon: IconKeys.gitlab,
+    title: "C",
+    icon: IconKeys.c,
   },
   {
     title: "Python",
     icon: IconKeys.python,
   },
   {
-    title: "C",
-    icon: IconKeys.c,
+    title: "Tensorflow",
+    icon: IconKeys.tensorflow,
   },
   {
-    title: "MySQL",
-    icon: IconKeys.mysql,
+    title: "Flutter",
+    icon: IconKeys.flutter,
   },
-  {
-    title: "Tailwind CSS",
-    icon: IconKeys.tailwind,
-  }
 ];
 
 export const projects = [
   {
-    img: "../../public/img/accueilSAE.png",
+    img: "./../../public/img/accueilSAE.png",
     title: "Gestion Notes & Études",
-    link: "Portfolio/descriptionProjet",
+    link: "/Portfolio/descriptionProjet",
     description: `Ce projet est une application web dédiée aux enseignants et aux étudiants, permettant de suivre les notes des semestres, d'analyser les progrès à l'aide de graphiques interactifs, et d'émettre des avis de poursuite d'études.`,
     technologies: [
       {
@@ -116,16 +121,18 @@ export const projects = [
         icon: IconKeys.git,
       },
     ],
+    page:"SiteGestionNote",
   },
   {
-    img: "../../public/img/accueilSAE.png",
+    img: "./../../public/img/accueilSAE.png",
     title: "Trains",
-    link: "https://task-manager-ecru-chi.vercel.app/dashboard",
+    link: "/Portfolio/descriptionProjet",
     description: `Un jeu inspiré de la gestion ferroviaire, où les joueurs construisent des réseaux, optimisent les trajets et gèrent leurs ressources pour atteindre leurs objectifs. Ce projet met l'accent sur la stratégie et la réflexion.`,
     technologies: [
       {
         icon: IconKeys.java,
       },
     ],
+    page:"AppTrain"
   },
 ];
