@@ -53,11 +53,11 @@ export default function NotesGestionPresentation() {
             </p>
 
             {/* Image container for the project screenshot */}
-            <div className="image-container flex justify-center items-center mb-10">
+            <div className="image-container flex justify-center items-center mb-15">
               <img
-                src="https://placehold.co/800x450/01be96/FFFFFF?text=Project+Screenshot"
+                src="/Portfolio/img/accueilSAE.png"
                 alt="Capture d'écran du site de gestion de notes"
-                className="project-screenshot rounded-lg shadow-xl max-w-full h-auto"
+                className="project-screenshot rounded-lg shadow-xl"
                 // Fallback for image loading errors
                 onError={(e) => {
                   e.target.onerror = null; // Prevent infinite loop
@@ -77,6 +77,57 @@ export default function NotesGestionPresentation() {
                 facilitant l'accès aux données tout en assurant une gestion efficace et sécurisée,
                 grâce à une collaboration étroite avec les clients pour répondre à leurs besoins.
               </p>
+            </div>
+
+            {/* Nouvelle section : Analyse Détaillée du Projet */}
+            <div className="section-heading-group">
+              <h1 className="section-title">Analyse Détaillée du Projet</h1>
+
+              <h2 className="subsection-title">Contexte et Réalisation</h2>
+              <ul className="tech-list">
+                <li><strong>Durée du projet :</strong> Septembre 2024 - Janvier 2025 (un semestre).</li>
+                <li><strong>Travail :</strong> Projet réalisé en groupe de 5 étudiants.</li>
+                <li><strong>Contraintes :</strong>
+                  {/* Appliquer la classe tech-list à la liste imbriquée pour corriger l'affichage */}
+                  <ul className="tech-list">
+                    <li>Méthodologie Agile pour une collaboration étroite avec les clients.</li>
+                    <li>Gestion d'un client "compliqué", nécessitant adaptabilité et communication renforcée.</li>
+                    <li>Exigence d'une application fonctionnelle, fluide, efficace et sécurisée.</li>
+                  </ul>
+                </li>
+              </ul>
+
+              <h2 className="subsection-title">Rôle et Responsabilités</h2>
+              <ul className="tech-list">
+                <li>Conception et implémentation des données dans la base de données (PHP et SQL).</li>
+                <li>Participation au développement du back-end (intégration de la logique métier).</li>
+                <li>Amélioration de l'ergonomie et de l'interface utilisateur (HTML, CSS, JavaScript).</li>
+              </ul>
+
+              <h2 className="subsection-title">Compétences Techniques Acquises</h2>
+              <ul className="skill-list">
+                <li><strong>Développement Back-end :</strong> Maîtrise de PHP et SQL pour la gestion des données et des interactions avec la base de données.</li>
+                <li><strong>Développement Front-end :</strong> Compétences en HTML/CSS et JavaScript pour la création de pages dynamiques et interactives.</li>
+                <li><strong>Gestion de Bases de Données :</strong> Création, gestion et optimisation des requêtes SQL.</li>
+                <li><strong>Outils de Gestion de Projet :</strong> Utilisation de Trello (organisation des tâches) et Lucid (schémas de base de données).</li>
+              </ul>
+
+              <h2 className="subsection-title">Compétences Humaines Acquises</h2>
+              <ul className="skill-list">
+                <li><strong>Travail en Équipe :</strong> Collaboration efficace au sein d'un groupe de 5 étudiants.</li>
+                <li><strong>Gestion de Projet Agile :</strong> Capacité à itérer et à s'adapter aux retours clients.</li>
+                <li><strong>Gestion de la Relation Client :</strong> Aptitude à gérer les exigences et les défis posés par un client "compliqué".</li>
+                <li><strong>Mise en Œuvre des Exigences :</strong> Traduction des besoins clients en fonctionnalités concrètes.</li>
+                <li><strong>Ergonomie et Expérience Utilisateur :</strong> Amélioration de la fluidité et de l'accessibilité de l'interface.</li>
+                <li><strong>Résolution de Problèmes :</strong> Capacité à surmonter les défis techniques et fonctionnels rencontrés.</li>
+              </ul>
+
+              <h2 className="subsection-title">Principaux Enseignements</h2>
+              <ul className="skill-list">
+                <li>Consolidation des compétences en développement web (PHP, bases de données).</li>
+                <li>Apprentissage de l'itération et de l'amélioration continue du produit en méthode Agile.</li>
+                <li>Développement de l'adaptabilité et de la communication face aux défis liés à la relation client.</li>
+              </ul>
             </div>
 
             {/* Section for Technologies Used */}
@@ -311,6 +362,15 @@ export default function NotesGestionPresentation() {
                       radial-gradient(circle at bottom right, rgba(1, 190, 150, 0.15) 0%, transparent 40%);
           z-index: -1; /* Behind content */
           opacity: 0.7;
+        }
+
+         /* Styles for project screenshot */
+        .project-screenshot {
+          max-width: 70%; /* Réduire la taille maximale de l'image à 70% de son conteneur */
+          height: auto; /* Maintient le ratio d'aspect */
+          display: block; /* Assure que l'image se comporte comme un bloc */
+          margin: 0 auto; /* Centre l'image horizontalement */
+          object-fit: contain; /* Assure que l'image entière est visible sans être coupée */
         }
 
       `}</style>

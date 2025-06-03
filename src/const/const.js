@@ -97,7 +97,7 @@ export const skills = [
 
 export const projects = [
   {
-    img: "./../../public/img/accueilSAE.png",
+    img: "/Portfolio/img/accueilSAE.png",
     title: "Gestion Notes & Études",
     link: "/Portfolio/descriptionProjet",
     description: `Ce projet est une application web dédiée aux enseignants et aux étudiants, permettant de suivre les notes des semestres, d'analyser les progrès à l'aide de graphiques interactifs, et d'émettre des avis de poursuite d'études.`,
@@ -124,7 +124,7 @@ export const projects = [
     page:"SiteGestionNote",
   },
   {
-    img: "./../../public/img/trains.jpg",
+    img: "/Portfolio/img/trains.jpg",
     title: "Trains",
     link: "/Portfolio/descriptionProjet",
     description: `Un jeu inspiré de la gestion ferroviaire, où les joueurs construisent des réseaux, optimisent les trajets et gèrent leurs ressources pour atteindre leurs objectifs. Ce projet met l'accent sur la stratégie et la réflexion.`,

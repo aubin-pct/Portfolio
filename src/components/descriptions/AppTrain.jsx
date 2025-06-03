@@ -4,25 +4,29 @@ export default function TrainsPresentation() {
   useEffect(() => {
     const letters = document.querySelectorAll(".bouncing-text-trigger");
     letters.forEach((letter) => {
-      letter.addEventListener("mouseenter", () => {
-        toggle(letter);
-      });
-    });
+      // Create a unique handler for each letter to ensure it's removed correctly
+      const handleMouseEnter = () => {
+        letter.classList.add("bouncing");
+        letter.addEventListener(
+          "animationend",
+          () => {
+            letter.classList.remove("bouncing");
+          },
+          { once: true }
+        );
+      };
+      letter.addEventListener("mouseenter", handleMouseEnter);
 
-    function toggle(letter) {
-      letter.classList.add("bouncing");
-      letter.addEventListener(
-        "animationend",
-        () => {
-          letter.classList.remove("bouncing");
-        },
-        { once: true }
-      );
-    }
+      // Store the handler on the element itself to remove it later
+      letter.__bouncingHandler = handleMouseEnter;
+    });
 
     return () => {
       letters.forEach((letter) => {
-        letter.removeEventListener("mouseenter", toggle);
+        // Use the stored handler to remove the event listener
+        if (letter.__bouncingHandler) {
+          letter.removeEventListener("mouseenter", letter.__bouncingHandler);
+        }
       });
     };
   }, []);
@@ -42,6 +46,19 @@ export default function TrainsPresentation() {
               Ce projet met l'accent sur la stratégie et la réflexion.
             </p>
 
+            {/* Section pour l'image du projet */}
+            <div className="image-container flex justify-center items-center mb-10">
+              <img
+                src="/Portfolio/img/image_train.png"
+                alt="Capture d'écran du jeu Trains"
+                className="project-screenshot rounded-lg shadow-xl"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = "https://placehold.co/800x450/CCCCCC/000000?text=Image+Not+Found";
+                }}
+              />
+            </div>
+
             <div className="section-heading-group">
               <h1 className="section-title">Présentation du Projet</h1>
               <p className="section-description">
@@ -51,40 +68,52 @@ export default function TrainsPresentation() {
               </p>
             </div>
 
+            {/* Nouvelle section : Analyse Détaillée du Projet */}
             <div className="section-heading-group">
-              <h1 className="section-title">Technologies Utilisées</h1>
+              <h1 className="section-title">Analyse Détaillée du Projet</h1>
 
-              <h2 className="subsection-title">Backend</h2>
+              <h2 className="subsection-title">Contexte et Réalisation</h2>
               <ul className="tech-list">
-                <li>Java</li>
-                <li>Sockets pour la communication client-serveur</li>
-                <li>Maven pour la gestion de projet</li>
-                <li>JavaFX pour la version desktop</li>
+                <li><strong>Durée du projet :</strong> Janvier 2024 - Juin 2024 (un semestre).</li>
+                <li><strong>Travail :</strong> Projet réalisé en équipe de 3 étudiants.</li>
+                <li><strong>Objectif :</strong> Transposer un jeu de société sur ordinateur en respectant ses règles et sa mécanique, offrant une expérience immersive et fonctionnelle.</li>
+                <li><strong>Description :</strong> J'ai participé au développement d'une version numérique d'un jeu de société en Java, adoptant une approche orientée objet pour modéliser le jeu et créer une version fonctionnelle à travers une interface interactive. Les principales fonctionnalités incluent la gestion des cartes, le placement des rails et l'exécution des actions de jeu, avec une modélisation précise des interactions entre cartes, plateau et règles pour garantir une jouabilité fluide.</li>
               </ul>
 
-              <h2 className="subsection-title">Frontend</h2>
+              <h2 className="subsection-title">Rôle et Responsabilités</h2>
               <ul className="tech-list">
-                <li>Angular pour l’interface web</li>
-                <li>HTML5/CSS3</li>
-                <li>WebSockets pour la communication en temps réel</li>
+                <li>Développement des mécanismes essentiels du jeu : gestion des cartes, placement des rails et interactions entre les joueurs.</li>
+                <li>Conception d'une interface utilisateur intuitive et ergonomique avec JavaFX pour faciliter la navigation et la visualisation des actions en temps réel.</li>
+                <li>Conception d'algorithmes pour les actions des cartes impactant le plateau, assurant une expérience fluide et cohérente.</li>
+                <li>Mise en place de tests unitaires pour vérifier la robustesse du jeu et assurer la fiabilité des fonctionnalités.</li>
+                <li>Concentration significative sur la <strong>logique du jeu</strong> et la gestion des cartes, en particulier la gestion des actions des joueurs et leur interaction avec le plateau.</li>
               </ul>
 
-              <h2 className="subsection-title">Infrastructure</h2>
-              <ul className="tech-list">
-                <li>Serveur dédié pour l’hébergement backend et frontend</li>
-                <li>Configuration Apache pour le déploiement web</li>
-              </ul>
-            </div>
-
-            <div className="section-heading-group">
-              <h1 className="section-title">Compétences Acquises</h1>
+              <h2 className="subsection-title">Compétences Techniques Acquises</h2>
               <ul className="skill-list">
-                <li>Programmation Orientée Objet avancée en Java</li>
-                <li>Communication client-serveur avec les WebSockets</li>
-                <li>Configuration et déploiement de projets Maven</li>
-                <li>Développement d’interfaces utilisateur avec JavaFX et Angular</li>
-                <li>Architecture logicielle (Pattern MVC)</li>
-                <li>Déploiement full-stack sur serveur</li>
+                <li><strong>Développement Java :</strong> Maîtrise avancée de la programmation orientée objet en Java pour les mécanismes du jeu.</li>
+                <li><strong>Interface Utilisateur :</strong> Développement d'interfaces interactives avec JavaFX pour une expérience utilisateur fluide.</li>
+                <li><strong>Tests Unitaires :</strong> Application rigoureuse des tests pour garantir la fiabilité et la pérennité des fonctionnalités.</li>
+                <li><strong>Conception Algorithmique :</strong> Création d'algorithmes pour la gestion des cartes, le placement des rails et les actions des joueurs.</li>
+                <li><strong>Structures de Données :</strong> Utilisation de structures de données adaptées pour optimiser la gestion des éléments du jeu.</li>
+                <li><strong>Qualité du Code :</strong> Respect des bonnes pratiques de développement pour un code propre, lisible et maintenable.</li>
+                <li><strong>Sécurité du Code :</strong> Application des principes de sécurité pour éviter les failles potentielles.</li>
+                <li><strong>Anciennes technologies (si applicable) :</strong> Sockets (communication client-serveur), Maven (gestion de projet), WebSockets (communication temps réel).</li>
+              </ul>
+
+              <h2 className="subsection-title">Compétences Humaines Acquises</h2>
+              <ul className="skill-list">
+                <li><strong>Travail en Équipe :</strong> Collaboration efficace au sein d'une équipe de 3 pour la coordination et la cohérence du projet.</li>
+                <li><strong>Gestion de Projet :</strong> Capacité à respecter les délais et à organiser le travail en équipe.</li>
+                <li><strong>Rigueur et attention aux détails :</strong> Développement d'une grande rigueur essentielle pour la logique complexe du jeu et la prévention des erreurs critiques.</li>
+                <li><strong>Ergonomie et Accessibilité :</strong> Prise en compte de l'expérience utilisateur pour une interface intuitive.</li>
+              </ul>
+
+              <h2 className="subsection-title">Principaux Enseignements</h2>
+              <ul className="skill-list">
+                <li>Consolidation des compétences en Java, en développement orienté objet et en conception d'interface utilisateur.</li>
+                <li>Renforcement des aptitudes en tests unitaires et en gestion de projet collaboratif.</li>
+                <li>Apprentissage de l'importance de la rigueur et de la logique dans le développement de systèmes complexes.</li>
               </ul>
             </div>
           </div>
@@ -254,6 +283,9 @@ export default function TrainsPresentation() {
           .presentation-section {
             padding: 50px 0;
           }
+          .project-screenshot {
+            max-width: 90%; /* Plus large sur les petits écrans */
+          }
         }
 
         @media (max-width: 480px) {
@@ -283,6 +315,14 @@ export default function TrainsPresentation() {
           opacity: 0.7;
         }
 
+        /* Styles for project screenshot */
+        .project-screenshot {
+          max-width: 70%; /* Réduire la taille maximale de l'image à 70% de son conteneur */
+          height: auto; /* Maintient le ratio d'aspect */
+          display: block; /* Assure que l'image se comporte comme un bloc */
+          margin: 0 auto; /* Centre l'image horizontalement */
+          object-fit: contain; /* Assure que l'image entière est visible sans être coupée */
+        }
       `}</style>
     </>
   );
