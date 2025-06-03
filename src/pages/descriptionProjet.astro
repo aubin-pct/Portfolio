@@ -1,17 +1,7 @@
 ---
 import "./../style/index.css";
-import SiteGestionNote from "../components/descriptions/SiteGestionNote.astro";
-import AppTrain from "../components/descriptions/AppTrain.astro";
-import Footer from "../components/footer/Footer.astro"; 
+import ClientProjectLoader from '../components/ClientProjectLoader.jsx';
 
-const components = {
-  SiteGestionNote,
-  AppTrain,
-};
-
-const { url } = Astro.request;
-const page = new URL(url).searchParams.get("page");
-const SelectedComponent = components[page];
 
 ---
 
@@ -34,10 +24,8 @@ const SelectedComponent = components[page];
     <title>Portfolio | Aubin Perchet</title>
   </head>
   <body>
-    <div class="container_p">
-      {SelectedComponent ? <SelectedComponent /> : <p>Composant introuvable.</p>}
+    <ClientProjectLoader client:only="react" />
 
-    </div>
+    
   </body>
-  <Footer />
 </html>

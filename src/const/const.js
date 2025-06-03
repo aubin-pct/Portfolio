@@ -124,7 +124,7 @@ export const projects = [
     page:"SiteGestionNote",
   },
   {
-    img: "./../../public/img/accueilSAE.png",
+    img: "./../../public/img/trains.jpg",
     title: "Trains",
     link: "/Portfolio/descriptionProjet",
     description: `Un jeu inspiré de la gestion ferroviaire, où les joueurs construisent des réseaux, optimisent les trajets et gèrent leurs ressources pour atteindre leurs objectifs. Ce projet met l'accent sur la stratégie et la réflexion.`,
