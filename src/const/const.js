@@ -35,7 +35,8 @@ export const IconKeys = {
   python: "python",
   c: "c",
   mysql: "mysql",
-  tensorflow: "tensorflow"
+  tensorflow: "tensorflow", 
+  postgresql: "postgresql",
   // here add more icon keys
 };
 
@@ -59,6 +60,10 @@ export const skills = [
   {
     title: "MySQL",
     icon: IconKeys.mysql,
+  },
+  {
+    title: "PostgreSQL",
+    icon: IconKeys.postgresql,
   },
   {
     title: "Git",
@@ -134,5 +139,29 @@ export const projects = [
       },
     ],
     page:"AppTrain"
+  },
+  {
+    img: "",
+    title: "VeryBadSplit",
+    link: "/Portfolio/descriptionProjet",
+    description: `Une application web de budgétisation événementielle, entièrement reconstruite pour gérer les dépenses partagées, corriger les failles de sécurité et offrir une interface moderne et réactive.`,
+    technologies: [
+      {
+        icon: IconKeys.php,
+      },
+      {
+        icon: IconKeys.html,
+      },
+      {
+        icon: IconKeys.mysql,
+      },
+      {
+        icon: IconKeys.javaScript,
+      },
+      {
+        icon: IconKeys.git,
+      },
+    ],
+    page:"VeryBadSplit"
   },
 ];

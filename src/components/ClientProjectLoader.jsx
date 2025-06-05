@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import SiteGestionNote from "./descriptions/SiteGestionNote";
 import AppTrain from "./descriptions/AppTrain";
+import VeryBadSplit from "./descriptions/VeryBadSplit";
 
 const components = {
   SiteGestionNote,
   AppTrain,
+  VeryBadSplit,
 };
 
 export default function ClientProjectLoader() {
