@@ -141,7 +141,7 @@ export const projects = [
     page:"AppTrain"
   },
   {
-    img: "",
+    img: "/Portfolio/img/verybadsplit_accueil.png",
     title: "VeryBadSplit",
     link: "/Portfolio/descriptionProjet",
     description: `Une application web de budgétisation événementielle, entièrement reconstruite pour gérer les dépenses partagées, corriger les failles de sécurité et offrir une interface moderne et réactive.`,

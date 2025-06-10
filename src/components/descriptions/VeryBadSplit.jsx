@@ -47,7 +47,7 @@ export default function VeryBadSplitPresentation() {
             {/* Section pour l'image du projet */}
             <div className="image-container flex justify-center items-center mb-10">
               <img
-                src=""
+                src="/Portfolio/img/verybadsplit_evenement.png"
                 alt="Capture d'écran de Very Bad Split - projet en cours"
                 className="project-screenshot rounded-lg shadow-xl"
                 onError={(e) => {
@@ -82,13 +82,13 @@ export default function VeryBadSplitPresentation() {
                 <li><strong>Défi :</strong> Auditer, refactoriser et sécuriser le code, normaliser la base de données étape par étape et moderniser l'interface grâce à la réactivité et aux appels d'API asynchrones.</li>
               </ul>
 
-              <h2 className="subsection-title">Votre Rôle et Responsabilités</h2>
+              <h2 className="subsection-title">Rôle et Responsabilités</h2>
               <ul className="tech-list">
                 <li>Analyse et documentation des failles de sécurité (SQLi, XSS, authentification faible).</li>
                 <li>Repenser et normaliser le schéma de la base de données en 3NF avec justification.</li>
                 <li>Implémentation des services principaux et des points de terminaison de l'API de l'application en PHP.</li>
                 <li>Développement de la couche de réactivité en JavaScript pour rendre l'interface utilisateur entièrement interactive sans rechargement de page.</li>
-                <li>Participation à la virtualisation du projet avec Docker Compose.</li>
+                <li>Virtualisation du projet avec Docker Compose.</li>
                 <li>Création d'une couche service dans l'architecture MVC pour faciliter la testabilité et la gestion des erreurs.</li>
                 <li>Implémentation d'une API et optimisation du calcul des dettes.</li>
               </ul>
