@@ -120,7 +120,7 @@ export const skills = [
 export const projects = [
   {
     img: "/Portfolio/img/ocr_project.png",
-    title: "Reconnaissance de Chiffres (CNN)",
+    title: "Robustesse IA : Architecture Hybride CNN-RNN",
     link: "/Portfolio/descriptionProjet",
     description: "Prototype end-to-end de reconnaissance de chiffres manuscrits intégrant un modèle CNN (TensorFlow/Keras) et une interface web interactive.",
     technologies: [
