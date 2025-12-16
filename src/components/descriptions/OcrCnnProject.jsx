@@ -42,13 +42,13 @@ export default function OcrCnnProjectPresentation() {
             <div className="title-block">
               {/* Project title with bouncing animation trigger */}
               <span className="project-title">
-                Reconnaissance de Chiffres (CNN)
+                Robustesse IA : Architecture Hybride CNN-RNN
               </span>
             </div>
 
             {/* Project tagline/description */}
             <p className="project-tagline">
-              Développement d'un prototype "end-to-end" intégrant un modèle de Deep Learning dans une application web pour identifier et interpréter des chiffres dessinés à la main en temps réel.
+              Conception d'un modèle de classification hybride surpassant les architectures classiques sur des données altérées (réduction du taux d'erreur de 9,35%).
             </p>
 
             {/* Image container for the project screenshot */}
@@ -69,9 +69,9 @@ export default function OcrCnnProjectPresentation() {
             <div className="section-heading-group">
               <h1 className="section-title">Présentation du Projet</h1>
               <p className="section-description">
-                Ce projet a été réalisé lors d'un stage de R&D chez Datanovate (Janv. 2025 - Mars 2025). L'objectif était de concevoir et développer un modèle de reconnaissance d'images (OCR) pour l'identification de caractères numériques.
+                Ce projet de recherche visait à dépasser les limites des CNN classiques face à des données 'imparfaites' (rotations, bruit, décalages). Au-delà de la classification simple (MNIST), le défi était de garantir la robustesse du modèle via une stratégie agressive de Data Augmentation (120 000 images générées) et de pré-traitement.
                 <br /><br />
-                Le défi technique majeur résidait dans la mise en place d'un pipeline de traitement d'image complet : transformer un dessin brut réalisé sur un canvas HTML5 en une donnée exploitable par une IA. J'ai implémenté un pré-traitement rigoureux en Python (décodage Base64, conversion niveaux de gris, redimensionnement 28x28, normalisation) pour assurer la compatibilité avec le modèle.
+                L'innovation majeure réside dans l'architecture : le couplage d'un CNN (pour l'extraction de traits) avec des unités récurrentes GRU bidirectionnelles (pour capturer les dépendances spatiales complexes). Validée par une approche rigoureuse (Validation Croisée 5-folds, Études d'ablation), cette solution hybride a atteint 98,45% de précision, surpassant l'architecture CNN standard optimisée.
               </p>
             </div>
 
@@ -81,23 +81,23 @@ export default function OcrCnnProjectPresentation() {
 
               <h2 className="subsection-title">Contexte et Réalisation</h2>
               <ul className="tech-list">
-                <li><strong>Contexte :</strong> Stage de R&D chez Datanovate (Computer Vision & Machine Learning).</li>
-                <li><strong>Objectif :</strong> Créer un modèle OCR pour chiffres manuscrits.</li>
-                <li><strong>Missions :</strong> Conception modèle, Data Preprocessing, Entraînement, Veille technologique.</li>
+                <li><strong>Contexte :</strong> R&D / Vision par Ordinateur (Computer Vision).</li>
+                <li><strong>Objectif :</strong> Créer un modèle OCR robuste pour chiffres manuscrits.</li>
+                <li><strong>Missions :</strong> Data Augmentation, Architecture Hybride (CNN-RNN), Optimisation Bayésienne.</li>
               </ul>
 
               <h2 className="subsection-title">Solution Technique</h2>
               <p className="section-description">
-                Le cœur du système repose sur un Réseau de Neurones Convolutif (CNN) entraîné avec Keras/TensorFlow. L'architecture comprend des couches de convolution (Conv2D) pour l'extraction de caractéristiques, suivies de pooling (MaxPooling2D) et de couches denses.
+                L'architecture hybride combine des couches de convolution pour l'extraction de caractéristiques locales et des unités GRU bidirectionnelles pour modéliser les dépendances spatiales globales.
                 <br /><br />
-                Pour la production, j'ai conçu un script de conversion automatisé transformant le modèle .h5 en format ONNX. Une fonctionnalité "boîte blanche" permet de visualiser les sorties des couches intermédiaires pour comprendre comment l'IA "voit" l'image.
+                La méthodologie intègre une validation croisée (5-folds) et des études d'ablation pour isoler l'impact de chaque composant (Dropout, BatchNormalization). L'optimisation des hyperparamètres a été automatisée via Keras Tuner.
               </p>
 
               <h2 className="subsection-title">Points Forts</h2>
               <ul className="skill-list">
-                <li><strong>Architecture découplée :</strong> Séparation nette entre frontend, pré-traitement et moteur d'inférence ONNX.</li>
-                <li><strong>Optimisation cross-platform :</strong> Script de conversion robuste (h5 vers ONNX) gérant les spécificités OS.</li>
-                <li><strong>Introspection du modèle :</strong> Visualisation des "feature maps" en temps réel pour l'explicabilité.</li>
+                <li><strong>Architecture Hybride Avancée :</strong> Combinaison de couches Convolutives et de GRU Bidirectionnels (256/512 unités).</li>
+                <li><strong>Approche MLOps Rigoureuse :</strong> Optimisation des hyperparamètres (Bayésienne), Callbacks dynamiques et études d'ablation.</li>
+                <li><strong>Performance :</strong> Réduction prouvée du taux d'erreur de 9,35% par rapport à un CNN standard sur jeu de test complexe.</li>
               </ul>
             </div>
 
@@ -106,19 +106,19 @@ export default function OcrCnnProjectPresentation() {
               <h1 className="section-title">Technologies Utilisées</h1>
 
               {/* Subsection for Backend Technologies */}
-              <h2 className="subsection-title">Langages & Web</h2>
+              <h2 className="subsection-title">Langages & Outils</h2>
               <ul className="tech-list">
                 <li>Python 3.9</li>
-                <li>JavaScript (ES6)</li>
-                <li>Flask, Jinja2, HTML5 Canvas</li>
+                <li>Docker</li>
+                <li>Pandas, NumPy, Matplotlib</li>
               </ul>
 
               {/* Subsection for AI/ML */}
               <h2 className="subsection-title">Machine Learning & IA</h2>
               <ul className="tech-list">
-                <li>TensorFlow/Keras (Architecture CNN)</li>
-                <li>ONNX & ONNX Runtime (Inférence)</li>
-                <li>Pillow (PIL), NumPy (Traitement d'image)</li>
+                <li>TensorFlow/Keras</li>
+                <li>CNN & RNN (GRU)</li>
+                <li>Keras Tuner</li>
               </ul>
             </div>
 
@@ -126,10 +126,10 @@ export default function OcrCnnProjectPresentation() {
             <div className="section-heading-group">
               <h1 className="section-title">Compétences Acquises</h1>
               <ul className="skill-list">
-                <li>Conception de réseaux de neurones convolutifs (CNN).</li>
-                <li>Pipeline de traitement d'image (Data Preprocessing).</li>
-                <li>Mise en production de modèles IA (ONNX).</li>
-                <li>Développement Full Stack avec intégration IA (Flask/JS).</li>
+                <li>Conception d'architectures Deep Learning Hybrides (CNN-RNN).</li>
+                <li>Stratégies avancées de Data Augmentation et Preprocessing.</li>
+                <li>Optimisation d'hyperparamètres et Validation Croisée.</li>
+                <li>Analyse scientifique des performances (Métriques, Ablation).</li>
                 <li>R&D et veille technologique en Computer Vision.</li>
               </ul>
             </div>
