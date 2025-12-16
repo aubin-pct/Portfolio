@@ -1,5 +1,10 @@
 export const studies = [
   {
+    title: "Stage Développeur IA",
+    corporation: "Datanovate",
+    date: "Janv. 2025 - Mars 2025",
+  },
+  {
     title: "Etudiant BUT Informatique",
     corporation: "IUT Montpellier",
     date: "2023 – 2026",
@@ -37,10 +42,51 @@ export const IconKeys = {
   mysql: "mysql",
   tensorflow: "tensorflow", 
   postgresql: "postgresql",
+  synphony: "synphony",
   // here add more icon keys
 };
 
 export const skills = [
+  {
+    title: "Symfony",
+    icon: IconKeys.synphony,
+  },
+  {
+    title: "PHP",
+    icon: IconKeys.php,
+  },
+  {
+    title: "MySQL",
+    icon: IconKeys.mysql,
+  },
+  {
+    title: "GitLab",
+    icon: IconKeys.gitlab,
+  },
+  {
+    title: "React Native",
+    icon: IconKeys.react,
+  },
+  {
+    title: "TypeScript",
+    icon: IconKeys.typeScript,
+  },
+  {
+    title: "Python",
+    icon: IconKeys.python,
+  },
+  {
+    title: "Tensorflow",
+    icon: IconKeys.tensorflow,
+  },
+  {
+    title: "Git",
+    icon: IconKeys.git,
+  },
+  {
+    title: "Github",
+    icon: IconKeys.github,
+  },
   {
     title: "Html",
     icon: IconKeys.html,
@@ -54,29 +100,8 @@ export const skills = [
     icon: IconKeys.tailwind,
   },
   {
-    title: "PHP",
-    icon: IconKeys.php,
-  },
-  {
-    title: "MySQL",
-    icon: IconKeys.mysql,
-  },
-  {
     title: "PostgreSQL",
     icon: IconKeys.postgresql,
-  },
-  {
-    title: "Git",
-    icon: IconKeys.git,
-  },
-
-  {
-    title: "Github",
-    icon: IconKeys.github,
-  },
-  {
-    title: "GitLab",
-    icon: IconKeys.gitlab,
   },
   {
     title: "Java",
@@ -87,20 +112,60 @@ export const skills = [
     icon: IconKeys.c,
   },
   {
-    title: "Python",
-    icon: IconKeys.python,
-  },
-  {
-    title: "Tensorflow",
-    icon: IconKeys.tensorflow,
-  },
-  {
     title: "Flutter",
     icon: IconKeys.flutter,
   },
 ];
 
 export const projects = [
+  {
+    img: "/Portfolio/img/ocr_project.png",
+    title: "Reconnaissance de Chiffres (CNN)",
+    link: "/Portfolio/descriptionProjet",
+    description: "Prototype end-to-end de reconnaissance de chiffres manuscrits intégrant un modèle CNN (TensorFlow/Keras) et une interface web interactive.",
+    technologies: [
+      {
+        icon: IconKeys.python,
+      },
+      {
+        icon: IconKeys.tensorflow,
+      },
+      {
+        icon: IconKeys.javaScript,
+      },
+      {
+        icon: IconKeys.html,
+      },
+    ],
+    page: "OcrCnnProject",
+  },
+  {
+    img: "/Portfolio/img/wavyMeteo.png",
+    title: "Wavy Météo",
+    link: "/Portfolio/descriptionProjet",
+    description: "Une solution complète alliant plateforme web communautaire et application mobile native, synchronisée via une API REST sécurisée.",
+    technologies: [
+      {
+        icon: IconKeys.synphony,
+      },
+      {
+        icon: IconKeys.php,
+      },
+      {
+        icon: IconKeys.react,
+      },
+      {
+        icon: IconKeys.typeScript,
+      },
+      {
+        icon: IconKeys.mysql,
+      },
+      {
+        icon: IconKeys.git,
+      },
+    ],
+    page: "WavyMeteo",
+  },
   {
     img: "/Portfolio/img/accueilSAE.png",
     title: "Gestion Notes & Études",

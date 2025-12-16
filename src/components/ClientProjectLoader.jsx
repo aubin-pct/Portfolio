@@ -2,11 +2,15 @@ import React, { useEffect, useState } from "react";
 import SiteGestionNote from "./descriptions/SiteGestionNote";
 import AppTrain from "./descriptions/AppTrain";
 import VeryBadSplit from "./descriptions/VeryBadSplit";
+import WavyMeteo from "./descriptions/WavyMeteo";
+import OcrCnnProject from "./descriptions/OcrCnnProject";
 
 const components = {
   SiteGestionNote,
   AppTrain,
   VeryBadSplit,
+  WavyMeteo,
+  OcrCnnProject,
 };
 
 export default function ClientProjectLoader() {
