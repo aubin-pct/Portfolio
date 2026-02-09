@@ -42,20 +42,20 @@ export default function OcrCnnProjectPresentation() {
             <div className="title-block">
               {/* Project title with bouncing animation trigger */}
               <span className="project-title">
-                Robustesse IA : Architecture Hybride CNN-RNN
+                OCR & Vision par Ordinateur : Reconnaissance Robuste
               </span>
             </div>
 
             {/* Project tagline/description */}
             <p className="project-tagline">
-              Conception d'un modèle de classification hybride surpassant les architectures classiques sur des données altérées (réduction du taux d'erreur de 9,35%).
+              Une intelligence artificielle conçue pour déchiffrer des caractères numériques, même lorsqu'ils sont déformés, bruités ou mal cadrés.
             </p>
 
             {/* Image container for the project screenshot */}
             <div className="image-container flex justify-center items-center mb-15">
               <img
                 src="/Portfolio/img/ocr_project.png"
-                alt="Capture d'écran du projet OCR"
+                alt="Architecture du réseau de neurones CNN : visualisation du pipeline complet depuis l'image normalisée 28x28, passage par les couches de convolution, reshape en vecteur de 128 dimensions, traitement par les couches cachées (512 unités), jusqu'aux prédictions finales avec 99.96% de confiance pour le chiffre 2"
                 className="project-screenshot rounded-lg shadow-xl"
                 // Fallback for image loading errors
                 onError={(e) => {
@@ -69,9 +69,9 @@ export default function OcrCnnProjectPresentation() {
             <div className="section-heading-group">
               <h1 className="section-title">Présentation du Projet</h1>
               <p className="section-description">
-                Ce projet de recherche visait à dépasser les limites des CNN classiques face à des données 'imparfaites' (rotations, bruit, décalages). Au-delà de la classification simple (MNIST), le défi était de garantir la robustesse du modèle via une stratégie agressive de Data Augmentation (120 000 images générées) et de pré-traitement.
+                Lors de ce stage R&D, l'objectif n'était pas seulement de reconnaître des chiffres parfaits (comme dans le dataset MNIST classique), mais de traiter des cas 'réels' et difficiles. J'ai entraîné une IA à lire des images qui ont subi des rotations, des zooms ou des décalages importants. Le but : garantir que l'algorithme reste fiable même quand la qualité de l'image d'entrée est mauvaise.
                 <br /><br />
-                L'innovation majeure réside dans l'architecture : le couplage d'un CNN (pour l'extraction de traits) avec des unités récurrentes GRU bidirectionnelles (pour capturer les dépendances spatiales complexes). Validée par une approche rigoureuse (Validation Croisée 5-folds, Études d'ablation), cette solution hybride a atteint 98,45% de précision, surpassant l'architecture CNN standard optimisée.
+                Pour y parvenir, les réseaux de neurones classiques (CNN) montraient leurs limites. J'ai donc conçu une architecture hybride innovante : j'ai couplé la vision du CNN avec la capacité d'analyse séquentielle des RNN (Unités GRU). Cette combinaison a permis au modèle de mieux 'comprendre' la structure des chiffres déformés, réduisant significativement le taux d'erreur par rapport aux solutions standards.
               </p>
             </div>
 
@@ -95,9 +95,9 @@ export default function OcrCnnProjectPresentation() {
 
               <h2 className="subsection-title">Points Forts</h2>
               <ul className="skill-list">
-                <li><strong>Architecture Hybride Avancée :</strong> Combinaison de couches Convolutives et de GRU Bidirectionnels (256/512 unités).</li>
-                <li><strong>Approche MLOps Rigoureuse :</strong> Optimisation des hyperparamètres (Bayésienne), Callbacks dynamiques et études d'ablation.</li>
-                <li><strong>Performance :</strong> Réduction prouvée du taux d'erreur de 9,35% par rapport à un CNN standard sur jeu de test complexe.</li>
+                <li><strong>Robustesse accrue :</strong> Gestion des rotations et du bruit via une stratégie de Data Augmentation massive (120k images).</li>
+                <li><strong>Architecture Hybride :</strong> Utilisation de couches GRU Bidirectionnelles pour surpasser les CNN classiques.</li>
+                <li><strong>Performance validée :</strong> Taux d'erreur réduit de 9,35% validé par cross-validation.</li>
               </ul>
             </div>
 
@@ -110,15 +110,15 @@ export default function OcrCnnProjectPresentation() {
               <ul className="tech-list">
                 <li>Python 3.9</li>
                 <li>Docker</li>
-                <li>Pandas, NumPy, Matplotlib</li>
+                <li>Pandas, NumPy</li>
               </ul>
 
               {/* Subsection for AI/ML */}
               <h2 className="subsection-title">Machine Learning & IA</h2>
               <ul className="tech-list">
-                <li>TensorFlow/Keras</li>
-                <li>CNN & RNN (GRU)</li>
-                <li>Keras Tuner</li>
+                <li>TensorFlow / Keras</li>
+                <li>CNN & RNN (Hybride)</li>
+                <li>Data Augmentation</li>
               </ul>
             </div>
 

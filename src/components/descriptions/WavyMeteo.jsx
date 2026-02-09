@@ -42,13 +42,15 @@ export default function WavyMeteoPresentation() {
             <div className="title-block">
               {/* Project title with bouncing animation trigger */}
               <span className="project-title">
-                Wavy Météo - Écosystème Web & Mobile
+                WAVY – Plateforme de Météo Marine & Communautaire
               </span>
             </div>
 
             {/* Project tagline/description */}
             <p className="project-tagline">
-              Une solution complète alliant plateforme web communautaire et application mobile native, synchronisée via une API REST sécurisée.
+              <strong>Type de projet :</strong> Projet de groupe (SAE)<br />
+              <strong>Rôle :</strong> Développement Fullstack (Focus Backend API & Architecture)<br />
+              <strong>Cible :</strong> Passionnés de sports nautiques (Surf, Voile, Plongée)
             </p>
 
             {/* Image container for the project screenshot */}
@@ -65,75 +67,80 @@ export default function WavyMeteoPresentation() {
               />
             </div>
 
-            {/* Section for Project Presentation */}
+            {/* Section 1: Le Défi */}
             <div className="section-heading-group">
-              <h1 className="section-title">Présentation du Projet</h1>
+              <h1 className="section-title">1. Le Défi</h1>
+              <h2 className="subsection-title">Répondre aux exigences critiques des sportifs de la mer.</h2>
               <p className="section-description">
-                Projet d'envergure développé en Situation d'Apprentissage (SAE). Le défi était de concevoir une architecture unifiée permettant aux utilisateurs d'accéder aux mêmes services via le Web et le Mobile.
+                La météo marine est bien plus complexe que la météo terrestre. Pour un surfeur ou un navigateur, une approximation n'est pas suffisante. Le défi était de centraliser des données techniques (houle, vent, marées) souvent éparpillées, et de les rendre accessibles en temps réel sur terre (Web) comme en mer (Mobile).
                 <br /><br />
-                J'ai développé un Backend Symfony agissant comme fournisseur d'API REST, sécurisé par authentification JWT. L'application mobile (React Native) consomme ces données en temps réel. Ce projet m'a permis de maîtriser la séparation Frontend/Backend et la gestion d'états complexes.
+                Il fallait également créer un espace communautaire où les pratiquants peuvent échanger sur les conditions réelles des spots ("reports"), créant ainsi une météo participative plus fiable que les simples algorithmes.
               </p>
             </div>
 
-            {/* Nouvelle section : Analyse Détaillée du Projet */}
+            {/* Section 2: La Solution */}
             <div className="section-heading-group">
-              <h1 className="section-title">Analyse Détaillée du Projet</h1>
-
-              <h2 className="subsection-title">Contexte et Réalisation</h2>
-              <ul className="tech-list">
-                <li><strong>Contexte :</strong> Projet réalisé dans le cadre d'une SAE (Situation d'Apprentissage et d'Évaluation).</li>
-                <li><strong>Objectif :</strong> Concevoir une architecture logicielle complexe et évolutive.</li>
-                <li><strong>Solution :</strong> Création d'un écosystème unifié (Web & Mobile) avec synchronisation des données.</li>
-              </ul>
-
-              <h2 className="subsection-title">Solution Technique</h2>
+              <h1 className="section-title">2. La Solution</h1>
+              <h2 className="subsection-title">Une architecture unifiée au service de la précision.</h2>
               <p className="section-description">
-                La solution technique repose sur un backend robuste développé avec Symfony, qui agit à la fois comme serveur web et comme fournisseur d'API REST. L'application mobile, conçue avec React Native et Expo, consomme cette API sécurisée par un système d'authentification JWT (Access & Refresh Tokens). Les utilisateurs peuvent ainsi consulter des prévisions, gérer leurs favoris, visualiser des cartes interactives et participer à un forum communautaire, avec une synchronisation parfaite entre leurs appareils.
+                Nous avons conçu une solution technique capable de traiter des données météorologiques marines spécifiques et de les synchroniser parfaitement entre les supports.
               </p>
-
-              <h2 className="subsection-title">Points Forts</h2>
               <ul className="skill-list">
-                <li><strong>Conception d'une API RESTful robuste :</strong> avec documentation.</li>
-                <li><strong>Sécurité avancée :</strong> Authentification JWT & Refresh Tokens.</li>
-                <li><strong>Développement Mobile Cross-Platform :</strong> fluide.</li>
+                <li><strong>API Dédiée (Symfony) :</strong> Développement d'un backend central qui agrège et harmonise les données complexes issues d'APIs météo spécialisées.</li>
+                <li><strong>Écosystème Cross-Platform :</strong>
+                  <ul style={{ listStyleType: 'disc', paddingLeft: '25px', marginTop: '10px', color: '#cccccc' }}>
+                    <li style={{ padding: '4px 0' }}><strong>Mobile (React Native) :</strong> Pour l'usage "sur le spot". Permet aux utilisateurs de vérifier les conditions de vent ou de vagues juste avant de se mettre à l'eau.</li>
+                    <li style={{ padding: '4px 0' }}><strong>Web :</strong> Pour la planification des sessions et l'interaction communautaire avancée.</li>
+                  </ul>
+                </li>
+                <li><strong>Sécurité Stateless (JWT) :</strong> Indispensable, notamment pour l'application mobile qui doit maintenir une connexion sécurisée même avec un réseau côtier parfois instable (passage automatique de la 4G au Wi-Fi, etc.).</li>
               </ul>
             </div>
 
-            {/* Section for Technologies Used */}
+            {/* Section 3: Le Résultat */}
             <div className="section-heading-group">
-              <h1 className="section-title">Technologies Utilisées</h1>
-
-              {/* Subsection for Backend Technologies */}
-              <h2 className="subsection-title">Backend & Base de données</h2>
-              <ul className="tech-list">
-                <li>Symfony 6.4, PHP 8</li>
-                <li>MySQL, Doctrine ORM</li>
-                <li>JWT (Lexik)</li>
-              </ul>
-
-              {/* Subsection for Frontend Technologies */}
-              <h2 className="subsection-title">Frontend & Mobile</h2>
-              <ul className="tech-list">
-                <li>React Native (Expo)</li>
-                <li>TypeScript</li>
-              </ul>
-
-              {/* Subsection for Project Management Tools */}
-              <h2 className="subsection-title">Outils & DevOps</h2>
-              <ul className="tech-list">
-                <li>Docker</li>
+              <h1 className="section-title">3. Le Résultat</h1>
+              <h2 className="subsection-title">Au-delà de la météo : un outil d'aide à la décision.</h2>
+              <p className="section-description">
+                Wavy ne se contente pas d'afficher la température, c'est un véritable outil pour les passionnés.
+              </p>
+              <ul className="skill-list">
+                <li><strong>Fonctionnalités "Métier" :</strong> Affichage détaillé des conditions de navigation (force du vent, hauteur de houle), cartographie des spots et gestion des favoris synchronisée.</li>
+                <li><strong>Adhésion Communautaire :</strong> Le système permet aux utilisateurs de valider ou corriger les prévisions, créant un lien de confiance fort.</li>
+                <li><strong>Performance :</strong> L'architecture séparée (API REST) garantit une fluidité maximale lors du chargement des cartes et des données, crucial pour une consultation rapide en extérieur.</li>
               </ul>
             </div>
 
-            {/* Section for Skills Acquired */}
+            {/* Section 4: Zoom sur la Sécurité & l'API */}
             <div className="section-heading-group">
-              <h1 className="section-title">Compétences Acquises</h1>
+              <h1 className="section-title">Zoom sur la Sécurité & l'API</h1>
+
+              <h2 className="subsection-title">Sécurité des données utilisateurs</h2>
+              <p className="section-description">
+                Dans un contexte où l'utilisateur se déplace (changement d'IP fréquent sur mobile) :
+              </p>
               <ul className="skill-list">
-                <li>Conception d'une architecture logicielle complexe.</li>
-                <li>Développement d'API RESTful sécurisée.</li>
-                <li>Synchronisation de données multi-plateformes.</li>
-                <li>Développement mobile natif avec React Native.</li>
-                <li>Gestion de l'authentification et de la sécurité (JWT).</li>
+                <li><strong>Authentification JWT & Refresh Tokens :</strong> J'ai implémenté un système de double token. Le Refresh Token est stocké de manière sécurisée et permet de renouveler la session automatiquement sans que l'utilisateur n'ait à retaper son mot de passe sur son smartphone, garantissant une expérience fluide et sûre.</li>
+              </ul>
+
+              <h2 className="subsection-title">Architecture API RESTful</h2>
+              <p className="section-description">
+                Le cœur du réacteur est l'API Symfony que j'ai conçue :
+              </p>
+              <ul className="skill-list">
+                <li>Elle agit comme une passerelle intelligente : elle reçoit les requêtes de l'app mobile (ex: "Donne-moi la houle à Biarritz"), interroge les services météo tiers, met en forme la donnée, et la renvoie au format JSON optimisé pour le mobile (faible consommation de data).</li>
+              </ul>
+            </div>
+
+            {/* Section 5: Stack Technique */}
+            <div className="section-heading-group">
+              <h1 className="section-title">Stack Technique</h1>
+              <ul className="tech-list">
+                <li><strong>Backend & API :</strong> Symfony 6.4, API Platform, PHP 8.</li>
+                <li><strong>Mobile :</strong> React Native, Expo (iOS/Android).</li>
+                <li><strong>Base de données :</strong> MySQL, Doctrine ORM.</li>
+                <li><strong>Sécurité :</strong> Lexik JWT Authentication Bundle.</li>
+                <li><strong>Infrastructure :</strong> Docker (Environnement de dév. unifié).</li>
               </ul>
             </div>
           </div>
