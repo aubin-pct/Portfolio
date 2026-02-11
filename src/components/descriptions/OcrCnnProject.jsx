@@ -41,7 +41,7 @@ export default function OcrCnnProjectPresentation() {
             {/* Title block for the main project title */}
             <div className="title-block">
               {/* Project title with bouncing animation trigger */}
-              <span className="project-title">
+              <span className="project-title" style={{ fontSize: "3rem" }}>
                 OCR & Vision par Ordinateur : Reconnaissance Robuste et Architecture Hybride
               </span>
             </div>
