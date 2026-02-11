@@ -42,14 +42,15 @@ export default function OcrCnnProjectPresentation() {
             <div className="title-block">
               {/* Project title with bouncing animation trigger */}
               <span className="project-title">
-                OCR & Vision par Ordinateur : Reconnaissance Robuste
+                OCR & Vision par Ordinateur : Reconnaissance Robuste et Architecture Hybride
               </span>
             </div>
 
             {/* Project tagline/description */}
-            <p className="project-tagline">
-              Une intelligence artificielle conçue pour déchiffrer des caractères numériques, même lorsqu'ils sont déformés, bruités ou mal cadrés.
-            </p>
+            <div className="project-tagline">
+              <p><strong>Type de projet :</strong> Stage R&D / Projet d'apprentissage</p>
+              <p><strong>Rôle :</strong> Stagiaire R&D</p>
+            </div>
 
             {/* Image container for the project screenshot */}
             <div className="image-container flex justify-center items-center mb-15">
@@ -67,70 +68,74 @@ export default function OcrCnnProjectPresentation() {
 
             {/* Section for Project Presentation */}
             <div className="section-heading-group">
-              <h1 className="section-title">Présentation du Projet</h1>
+              <h1 className="section-title">Le Défi : Dépasser les limites académiques</h1>
               <p className="section-description">
-                Lors de ce stage R&D, l'objectif n'était pas seulement de reconnaître des chiffres parfaits (comme dans le dataset MNIST classique), mais de traiter des cas 'réels' et difficiles. J'ai entraîné une IA à lire des images qui ont subi des rotations, des zooms ou des décalages importants. Le but : garantir que l'algorithme reste fiable même quand la qualité de l'image d'entrée est mauvaise.
+                Dans le cadre de ce stage de R&D, l'objectif n'était pas seulement de répondre à un besoin technique, mais d'utiliser un cas d'usage classique — la reconnaissance de chiffres manuscrits — comme vecteur d'apprentissage approfondi du Deep Learning.
                 <br /><br />
-                Pour y parvenir, les réseaux de neurones classiques (CNN) montraient leurs limites. J'ai donc conçu une architecture hybride innovante : j'ai couplé la vision du CNN avec la capacité d'analyse séquentielle des RNN (Unités GRU). Cette combinaison a permis au modèle de mieux 'comprendre' la structure des chiffres déformés, réduisant significativement le taux d'erreur par rapport aux solutions standards.
+                Les modèles standards (type CNN) excellent sur des données académiques parfaites comme le dataset MNIST, mais leur performance s'effondre souvent en conditions réelles face à des données "sales". Le défi technique principal était donc de <strong>construire une IA résiliente</strong>, capable de "lire" des chiffres fortement dégradés (rotations, bruit, zoom, décentrage), pour comprendre et maîtriser les mécanismes profonds de la robustesse en Vision par Ordinateur.
               </p>
             </div>
 
-            {/* Nouvelle section : Analyse Détaillée du Projet */}
+            {/* Section : La Solution */}
             <div className="section-heading-group">
-              <h1 className="section-title">Analyse Détaillée du Projet</h1>
-
-              <h2 className="subsection-title">Contexte et Réalisation</h2>
-              <ul className="tech-list">
-                <li><strong>Contexte :</strong> R&D / Vision par Ordinateur (Computer Vision).</li>
-                <li><strong>Objectif :</strong> Créer un modèle OCR robuste pour chiffres manuscrits.</li>
-                <li><strong>Missions :</strong> Data Augmentation, Architecture Hybride (CNN-RNN), Optimisation Bayésienne.</li>
-              </ul>
-
-              <h2 className="subsection-title">Solution Technique</h2>
+              <h1 className="section-title">La Solution : Une Hybridation CNN-RNN</h1>
               <p className="section-description">
-                L'architecture hybride combine des couches de convolution pour l'extraction de caractéristiques locales et des unités GRU bidirectionnelles pour modéliser les dépendances spatiales globales.
-                <br /><br />
-                La méthodologie intègre une validation croisée (5-folds) et des études d'ablation pour isoler l'impact de chaque composant (Dropout, BatchNormalization). L'optimisation des hyperparamètres a été automatisée via Keras Tuner.
+                Pour pallier les limites de la vision classique, j'ai conçu et implémenté une architecture neuronale innovante couplant deux approches complémentaires :
               </p>
-
-              <h2 className="subsection-title">Points Forts</h2>
-              <ul className="skill-list">
-                <li><strong>Robustesse accrue :</strong> Gestion des rotations et du bruit via une stratégie de Data Augmentation massive (120k images).</li>
-                <li><strong>Architecture Hybride :</strong> Utilisation de couches GRU Bidirectionnelles pour surpasser les CNN classiques.</li>
-                <li><strong>Performance validée :</strong> Taux d'erreur réduit de 9,35% validé par cross-validation.</li>
+              <ul className="tech-list mb-6">
+                <li>
+                  <strong>L'œil (CNN) :</strong> Une série de couches de convolution (inspirées d'architectures éprouvées) pour extraire les caractéristiques visuelles locales de l'image.
+                  <br />
+                  <small>Pipeline : Image normalisée 28x28 → Couches de Convolution + Pooling → Reshape en vecteur de 128 dimensions.</small>
+                </li>
+                <li>
+                  <strong>Le contexte (RNN/GRU) :</strong> L'intégration de couches récurrentes (GRU Bidirectionnelles, optimisées à 512 unités) permet au modèle d'analyser la cohérence spatiale et séquentielle des caractéristiques extraites. Cela donne au réseau une forme de "mémoire" contextuelle, lui permettant de reconnaitre un chiffre même lorsqu'il est tordu, incomplet ou bruité.
+                </li>
               </ul>
+              <p className="section-description">
+                Un exemple marquant de cette robustesse est la capacité du modèle à maintenir des prédictions de très haute confiance (ex: <strong>99.96%</strong> pour un chiffre 2) même sur des échantillons altérés.
+                <br /><br />
+                <strong>Validation Scientifique :</strong> Cette architecture a été validée par une méthodologie rigoureuse incluant une <strong>Data Augmentation massive</strong> (120 000 images générées incluant des variations géométriques et des imperfections de placement), une <strong>Validation Croisée</strong> (5-folds) et une <strong>optimisation bayésienne</strong> des hyperparamètres via Keras Tuner.
+              </p>
+            </div>
+
+            {/* Section : Le Résultat */}
+            <div className="section-heading-group">
+              <h1 className="section-title">Le Résultat : Performance technique et expertise acquise</h1>
+              <p className="section-description">
+                Sur le plan technique, l'approche hybride CNN-RNN a permis une réduction significative du taux d'erreur : <strong>-9,35%</strong> par rapport aux solutions standards sur nos jeux de données bruités de test.
+                <br /><br />
+                Au-delà de la performance brute, ce projet a transformé une exploration académique en un savoir-faire technique concret, couvrant l'intégralité du pipeline de Computer Vision : de la théorie fondamentale aux stratégies avancées de pré-traitement et d'optimisation.
+              </p>
+            </div>
+
+            {/* Section : Mon Entraînement */}
+            <div className="section-heading-group">
+              <h1 className="section-title">Mon Entraînement : Une Montée en Compétence Itérative</h1>
+              <p className="section-description">
+                Avant d'aboutir à cette solution hybride, j'ai suivi un parcours structuré en plusieurs étapes clés ("Rendus"), me permettant de maîtriser progressivement les fondements de l'IA :
+              </p>
+              <ul className="skill-list">
+                <li><strong>Bases Algorithmiques (Rendu 1) :</strong> Création d'outils de dessin et de traitement d'image ("from scratch") pour comprendre la normalisation et le formatage des données (mise aux normes MNIST).</li>
+                <li><strong>Mathématiques du Machine Learning (Rendus 2 & 3) :</strong> Implémentation manuelle de régressions linéaires et polynomiales. Étude des indicateurs d'erreur (MSE, R²) pour appréhender la notion de fonction de coût.</li>
+                <li><strong>Analyse de Données & Classifiction (Rendu 4) :</strong> Exploration de la réduction de dimensionnalité (PCA) et comparaison de modèles classiques (Régression Logistique Ordinale vs SVM) sur des tâches de classification.</li>
+                <li><strong>Réseaux de Neurones (Rendus 5, 6 & 7) :</strong> Passage au Deep Learning avec l'implémentation de Perceptrons Multi-Couches (MLP), d'abord théorique puis via TensorFlow/Keras. Application à des cas concrets (classification dermatologique) avec gestion du déséquilibre des classes.</li>
+                <li><strong>Vision par Ordinateur (Rendu 8) :</strong> Première approche des CNN (Réseaux de Neurones Convolutifs) pour la classification d'images, posant les bases de l'architecture finale.</li>
+              </ul>
+              <p className="section-description mt-4">
+                Ce parcours progressif m'a permis de ne pas simplement "utiliser" des librairies, mais de comprendre la logique mathématique et algorithmique derrière chaque couche du modèle final.
+              </p>
             </div>
 
             {/* Section for Technologies Used */}
             <div className="section-heading-group">
-              <h1 className="section-title">Technologies Utilisées</h1>
+              <h1 className="section-title">Stack Technique</h1>
 
-              {/* Subsection for Backend Technologies */}
-              <h2 className="subsection-title">Langages & Outils</h2>
               <ul className="tech-list">
-                <li>Python 3.9</li>
-                <li>Docker</li>
-                <li>Pandas, NumPy</li>
-              </ul>
-
-              {/* Subsection for AI/ML */}
-              <h2 className="subsection-title">Machine Learning & IA</h2>
-              <ul className="tech-list">
-                <li>TensorFlow / Keras</li>
-                <li>CNN & RNN (Hybride)</li>
-                <li>Data Augmentation</li>
-              </ul>
-            </div>
-
-            {/* Section for Skills Acquired */}
-            <div className="section-heading-group">
-              <h1 className="section-title">Compétences Acquises</h1>
-              <ul className="skill-list">
-                <li>Conception d'architectures Deep Learning Hybrides (CNN-RNN).</li>
-                <li>Stratégies avancées de Data Augmentation et Preprocessing.</li>
-                <li>Optimisation d'hyperparamètres et Validation Croisée.</li>
-                <li>Analyse scientifique des performances (Métriques, Ablation).</li>
-                <li>R&D et veille technologique en Computer Vision.</li>
+                <li><strong>Core & Environnement :</strong> Python 3.9</li>
+                <li><strong>Deep Learning :</strong> TensorFlow / Keras (Architecture Hybride Custom), Keras Tuner (Optimisation bayésienne)</li>
+                <li><strong>Data Science :</strong> NumPy, Pandas, scikit-learn (PCA, SVM, Métriques)</li>
+                <li><strong>Méthodologie :</strong> Cross-Validation (5-folds), Data Augmentation Avancée, Études d'ablation</li>
               </ul>
             </div>
           </div>
