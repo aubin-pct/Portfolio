@@ -6,7 +6,7 @@ import photoperfil from "../../../../public/img/PP_Aubin.jpg";
 <div class="content-presentation">
   <div class="linear-gradient-2"></div>
   <div class="linear-gradient-1"></div>
-  <dir class="container-persentation">
+  <div class="container-persentation">
     <div class="container-text">
       <!-- <h2 class="text-hello">Bonjour <strong>je suis</strong></h2> -->
       <h2 class="text-name">Aubin Perchet</h2>
@@ -29,7 +29,7 @@ import photoperfil from "../../../../public/img/PP_Aubin.jpg";
           >Email</a
         >
         <a
-          href="https://drive.google.com/file/d/128VwY4yM_Ao8KEcIYHJKISPXrS3vlI8o/view?usp=sharing"
+          href="https://drive.google.com/file/d/1987EJTZ6Kj9Dxvda2TPXZPyqjn_Et1Yh/view?usp=share_link"
           class="a-curriculum"
           target="_blank">Mon CV</a
         >
@@ -53,13 +53,10 @@ import photoperfil from "../../../../public/img/PP_Aubin.jpg";
     </div>
     <div class="container-photo-profile">
       <div class="photo-perfil">
-        <picture>
-          {/* If you are not using vercel, place a normal <img> tag */}
-          <Image src={photoperfil} alt="Aubin Perchet" id="inicio" />
-        </picture>
+        <Image src={photoperfil} alt="Aubin Perchet" id="inicio" width={300} height={300} />
       </div>
     </div>
-  </dir>
+  </div>
 </div>
 
 <script>
@@ -285,9 +282,11 @@ import photoperfil from "../../../../public/img/PP_Aubin.jpg";
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
     overflow: hidden;
     height: 300px;
     width: 300px;
+    aspect-ratio: 1 / 1;
     margin-top: 30px;
     margin-left: 110px;
     border-radius: 50%;
@@ -305,13 +304,12 @@ import photoperfil from "../../../../public/img/PP_Aubin.jpg";
     object-fit: cover;
     height: 100%;
     width: 100%;
+    border-radius: 50%;
     filter: drop-shadow(-10px -5px 10px #000) contrast(110%);
     transition: 0.3s;
   }
 
-   {
-    /* responsive*/
-  }
+  /* responsive*/
   @media (max-width: 900px) {
     .container-persentation {
       flex-direction: column-reverse;
@@ -322,7 +320,7 @@ import photoperfil from "../../../../public/img/PP_Aubin.jpg";
     .container-photo-profile {
       width: 100%;
       justify-content: center;
-      justify-items: center;
+      align-items: center;
       margin: 0;
     }
     .photo-perfil {
