@@ -119,7 +119,7 @@ export const skills = [
 
 export const projects = [
   {
-    img: "/Portfolio/img/ocr_project.png",
+    img: "",
     title: "First-RAG : Architecture RAG Avancée & Apprentissage",
     link: "/Portfolio/descriptionProjet",
     description: "Une implémentation complète d'un système RAG avec recherche hybride, reranking et architecture modulaire, avec une version simplifiée testable dans le portfolio.",
