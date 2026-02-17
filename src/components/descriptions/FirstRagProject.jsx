@@ -41,16 +41,10 @@ export default function FirstRagProject() {
               <strong>Démo portfolio :</strong> Une version légèrement simplifiée sera disponible pour test utilisateur
             </p>
 
-            <div className="image-container flex justify-center items-center mb-15">
-              <img
-                src="/Portfolio/img/first-rag.png"
-                alt="Illustration du projet First-RAG"
-                className="project-screenshot rounded-lg shadow-xl"
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src = "https://placehold.co/1000x560/0b0b0b/01be96?text=First-RAG";
-                }}
-              />
+            <div className="section-heading-group rag-cta-wrap">
+              <a className="rag-cta-button" href="/Portfolio/ragChat" target="_blank" rel="noreferrer">
+                tester le rag
+              </a>
             </div>
 
             <div className="section-heading-group">
@@ -79,7 +73,7 @@ export default function FirstRagProject() {
                 <li><strong>Alternative envisagée : LLM Multimodaux Vision</strong><br /><em>Concept</em> : Envoyer directement les images des pages PDF au LLM pour qu'il "lise" visuellement le document.<br /><em>Pourquoi pas ?</em> Bien que très performant, le <strong>coût aurait explosé</strong> pour de gros volumes documentaires. Un PDF de 100 pages traité page par page en vision est extrêmement coûteux en tokens. LlamaParse offre un compromis "one-shot" beaucoup plus économique et suffisant pour mon cas.</li>
               </ul>
 
-              <h2 className="subsection-title">2. Modèle de Langage (Inférence)</h2>
+              <h2 className="subsection-title">2. Modèle de Langage</h2>
               <ul className="skill-list">
                 <li><strong>Développement : Ollama (Local)</strong><br /><em>Pourquoi ?</em> J'ai utilisé <strong>Ollama</strong> pour faire tourner les modèles (Llama 3) entièrement en local pendant la phase de développement. Cela m'a permis d'itérer rapidement sans coût, sans latence réseau, et en gardant la maîtrise totale de l'infrastructure.</li>
                 <li><strong>Déploiement Portfolio : Groq (Cloud)</strong><br /><em>Pourquoi ?</em> Pour la démonstration publique, j'ai basculé sur l'API <strong>Groq</strong>. Son offre gratuite généreuse et sa vitesse d'inférence vous permet de tester le RAG avec une fluidité, sans que j'aie à héberger un serveur GPU coûteux.</li>
@@ -273,6 +267,42 @@ export default function FirstRagProject() {
 
         .ordered-list {
           list-style: none;
+        }
+
+        .rag-cta-wrap {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: -8px;
+          margin-bottom: 28px;
+        }
+
+        .rag-cta-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          border-radius: 999px;
+          padding: 9px 16px;
+          background: #01be96;
+          color: #07120f;
+          font-weight: 700;
+          font-size: 0.9rem;
+          letter-spacing: 0.03em;
+          text-transform: uppercase;
+          cursor: pointer;
+          transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+          box-shadow: 0 8px 20px rgba(1, 190, 150, 0.25), 0 0 0 1px rgba(1, 190, 150, 0.35);
+        }
+
+        .rag-cta-button:hover {
+          opacity: 0.95;
+          transform: translateY(-2px);
+          box-shadow: 0 10px 24px rgba(1, 190, 150, 0.3), 0 0 0 1px rgba(1, 190, 150, 0.45);
+        }
+
+        .rag-cta-button:active {
+          transform: translateY(0);
         }
 
         .bouncing {

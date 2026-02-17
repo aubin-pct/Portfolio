@@ -1,0 +1,22 @@
+---
+import "./../style/index.css";
+import FirstRagChat from "../components/descriptions/FirstRagChat.jsx";
+import Footer from "../components/footer/Footer.astro";
+---
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Chat de démonstration First-RAG" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Aubin Perchet" />
+    <meta property="og:title" content="First-RAG Chat | Aubin Perchet" />
+    <title>First-RAG Chat | Aubin Perchet</title>
+  </head>
+  <body>
+    <FirstRagChat client:only="react" />
+    <Footer />
+  </body>
+</html>
