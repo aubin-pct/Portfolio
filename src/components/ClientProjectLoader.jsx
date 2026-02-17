@@ -4,6 +4,7 @@ import AppTrain from "./descriptions/AppTrain";
 import VeryBadSplit from "./descriptions/VeryBadSplit";
 import WavyMeteo from "./descriptions/WavyMeteo";
 import OcrCnnProject from "./descriptions/OcrCnnProject";
+import FirstRagProject from "./descriptions/FirstRagProject";
 
 const components = {
   SiteGestionNote,
@@ -11,6 +12,7 @@ const components = {
   VeryBadSplit,
   WavyMeteo,
   OcrCnnProject,
+  FirstRagProject,
 };
 
 export default function ClientProjectLoader() {

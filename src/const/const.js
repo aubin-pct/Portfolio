@@ -120,6 +120,27 @@ export const skills = [
 export const projects = [
   {
     img: "/Portfolio/img/ocr_project.png",
+    title: "First-RAG : Architecture RAG Avancée & Apprentissage",
+    link: "/Portfolio/descriptionProjet",
+    description: "Une implémentation complète d'un système RAG avec recherche hybride, reranking et architecture modulaire, avec une version simplifiée testable dans le portfolio.",
+    technologies: [
+      {
+        icon: IconKeys.python,
+      },
+      {
+        icon: IconKeys.postgresql,
+      },
+      {
+        icon: IconKeys.javaScript,
+      },
+      {
+        icon: IconKeys.git,
+      },
+    ],
+    page: "FirstRagProject",
+  },
+  {
+    img: "/Portfolio/img/ocr_project.png",
     title: "OCR & Vision par Ordinateur : Reconnaissance Robuste",
     link: "/Portfolio/descriptionProjet",
     description: "Une intelligence artificielle conçue pour déchiffrer des caractères numériques, même lorsqu'ils sont déformés, bruités ou mal cadrés.",
