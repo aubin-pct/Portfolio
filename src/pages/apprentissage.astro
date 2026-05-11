@@ -1,0 +1,90 @@
+---
+import Header from "./../components/header/Header.astro";
+import "./../style/index.css";
+import Footer from "../components/footer/Footer.astro";
+---
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Dossier d'Apprentissage : Aubin PERCHET" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Aubin Perchet" />
+    <meta property="og:title" content="Dossier d'Apprentissage | Aubin Perchet" />
+    <script src="https://kit.fontawesome.com/2898a0ac51.js" crossorigin="anonymous"></script>
+    <title>Dossier d'Apprentissage | Aubin Perchet</title>
+    <style>
+      .apprentissage-container {
+        max-width: 800px;
+        margin: 120px auto 60px;
+        padding: 0 20px;
+        color: #fff;
+        line-height: 1.6;
+      }
+      .apprentissage-container h1 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        color: #00ff95; /* Couleur d'accentuation courante dans les portfolios de dev */
+      }
+      .apprentissage-container h2 {
+        font-size: 1.5rem;
+        margin-top: 40px;
+        margin-bottom: 15px;
+        color: #f1f1f1;
+        border-bottom: 1px solid #333;
+        padding-bottom: 10px;
+      }
+      .apprentissage-container p {
+        margin-bottom: 15px;
+        color: #ccc;
+        font-size: 1.1rem;
+        text-align: justify;
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main class="apprentissage-container">
+      <h1>Dossier d’Apprentissage : Aubin PERCHET</h1>
+      <p>
+        Mon parcours en BUT Informatique est guidé par une approche pragmatique : la technique doit servir un besoin réel. Pour moi, l’intelligence artificielle ne se résume pas à la conception de modèles (20 % du travail) ; c’est avant tout une question d’ingénierie logicielle et de gestion de données (les 80 % restants).
+      </p>
+      <p>
+        Voici comment j’ai mobilisé les compétences du référentiel BUT pour construire ce profil.
+      </p>
+
+      <h2>Compétence 1 : Réaliser un développement d'application</h2>
+      <p>
+        L'école nous apprend à concevoir et coder des solutions répondant à des besoins utilisateurs. J'ai poussé cet apprentissage avec mon projet TankDuel AI. Au-delà du développement web classique, j’ai dû implémenter un agent de Deep Reinforcement Learning en JavaScript. Cela m’a obligé à traduire des concepts mathématiques en une architecture logicielle fonctionnelle, testable et maintenable.
+      </p>
+
+      <h2>Compétence 2 : Optimiser des solutions informatiques</h2>
+      <p>
+        L’enjeu ici est de choisir les meilleurs algorithmes et structures de données pour garantir la performance. Dans mon projet de veille automatisée, j'ai d'abord tenté de tout développer en Python avant de réaliser que l'optimisation passait aussi par l'utilisation d'outils d'orchestration comme n8n. J'ai appris que l'ingénieur ne doit pas "réinventer la roue" : optimiser, c'est savoir arbitrer entre un développement sur mesure et l'intégration d'API existantes pour gagner en fiabilité.
+      </p>
+
+      <h2>Compétence 3 : Administrer des systèmes informatiques communicants complexes</h2>
+      <p>
+        Installer, configurer et protéger les services réseaux est une base du BUT. J’ai appliqué cette compétence en configurant mes propres environnements pour faire tourner des IA locales (LLMs). Cette démarche m’a permis de manipuler concrètement la gestion des ressources machine, la virtualisation et la communication entre briques logicielles hétérogènes. Je vois l'infrastructure comme le support indispensable de n'importe quelle solution d'IA.
+      </p>
+
+      <h2>Compétence 4 : Gérer des données de l'information</h2>
+      <p>
+        Si le BUT met l'accent sur le SQL et le relationnel, j'ai élargi ce socle à la gestion de données non structurées avec mon projet de RAG (Retrieval-Augmented Generation). J'ai appris à administrer des bases de données vectorielles (ChromaDB) et à maîtriser les processus de nettoyage et d'indexation (chunking). C’est ici que je rejoins l’aspect "Data Computing" : savoir organiser la donnée est aussi crucial que savoir coder l'algorithme qui l'utilise.
+      </p>
+
+      <h2>Compétence 5 : Conduire un projet</h2>
+      <p>
+        Apprendre à piloter un projet et à répondre aux besoins des clients est au cœur de ma double licence à l'IAE. Grâce à ce cursus en management, je n'aborde pas un projet uniquement sous l'angle du code, mais sous celui de la valeur ajoutée. Je sais analyser les processus métiers d'une entreprise pour identifier où l'automatisation peut réellement débloquer de l'efficacité opérationnelle.
+      </p>
+
+      <h2>Compétence 6 : Collaborer au sein d'une équipe informatique</h2>
+      <p>
+        S'intégrer dans une équipe et communiquer est essentiel. Mon stage de deuxième année a été une expérience marquante sur ce point. Le contexte de distanciel total et une mission peu stimulante auraient pu bloquer ma progression. J'ai choisi d'en faire un exercice d'autonomie et de force de proposition en m'auto-formant au Deep Learning. Collaborer, c'est aussi savoir rester moteur et partager ses recherches même quand le cadre est difficile.
+      </p>
+    </main>
+    <Footer />
+  </body>
+</html>
